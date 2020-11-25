@@ -7,5 +7,5 @@ def build_person(first_name, last_name, age=None):
 
 musician = build_person("jimi", "hendrix", age=27)
 print(musician)
-deadbeat = build_person("ronald", "mcdonald")
+deadbeat = build_person("ronald", "mcdonald", age=27)
 print(deadbeat)

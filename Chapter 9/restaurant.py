@@ -6,7 +6,7 @@ class Restaurant:
 
 	def describe_restaurant(self):
 		print(
-			f"The name of the restaurant is {self.restaurant_name} and it "
+			f"\nThe name of the restaurant is {self.restaurant_name} and it "
 			f"serves {self.cuisine_type}-type cuisine."
 		)
 
@@ -23,13 +23,20 @@ class Restaurant:
 		self.number_served = 0
 
 
-restaurant = Restaurant("Wendy's", "burgers")
+class IceCreamStand(Restaurant):
+	def __init__(self, restaurant_name, cuisine_type):
+		super().__init__(restaurant_name, cuisine_type)
+		self.flavors = ["vanilla", "chocolate", "strawberry"]
+
+	def get_flavors(self):
+		print(f"\nThe restaurant offers these flavors of ice cream:")
+		for f in self.flavors:
+			print(" - " + f)
+
+
+restaurant = IceCreamStand("Wendy's", "burgers")
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
-
-restaurant.served()
-restaurant.increment_served(56465)
 restaurant.served()
 
-restaurant.reset_served()
-restaurant.served()
+restaurant.get_flavors()

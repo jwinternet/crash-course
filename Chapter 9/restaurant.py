@@ -19,6 +19,9 @@ class Restaurant:
 	def increment_served(self, more_served):
 		self.number_served += more_served
 
+	def reset_served(self):
+		self.number_served = 0
+
 
 restaurant = Restaurant("Wendy's", "burgers")
 restaurant.describe_restaurant()
@@ -26,4 +29,7 @@ restaurant.open_restaurant()
 
 restaurant.served()
 restaurant.increment_served(56465)
+restaurant.served()
+
+restaurant.reset_served()
 restaurant.served()

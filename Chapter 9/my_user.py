@@ -1,4 +1,4 @@
-from user_profile import Admin
+from admin import Admin
 
 user = Admin("Jeff", "Skilling", "AskWhyAsshole1999", "USA", 2184)
 user.describe_user()

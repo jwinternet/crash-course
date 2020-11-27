@@ -11,6 +11,6 @@ class AnonymousSurvey:
 		self.responses.append(new_response)
 
 	def show_results(self):
-		print("survey results:")
+		print("Survey results:")
 		for response in self.responses:
 			print(f"- {response}")

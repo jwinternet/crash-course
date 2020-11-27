@@ -1,0 +1,3 @@
+In Python you can save the world.
+In Python you can smell the roses.
+In Python you can guess random numbers!

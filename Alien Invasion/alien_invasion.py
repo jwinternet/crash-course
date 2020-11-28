@@ -1,12 +1,17 @@
 import sys
+
 import pygame
+from settings import Settings
 
 
 class AlienInvasion:
 
 	def __init__(self):
 		pygame.init()
-		self.screen = pygame.display.set_mode((1300, 750))
+		self.settings = Settings()
+		self.screen = pygame.display.set_mode(
+				(self.settings.screen_width, self.settings.screen_height)
+		)
 		pygame.display.set_caption("Alien Invasion")
 		self.bg_color = (230, 230, 230)
 
@@ -15,7 +20,7 @@ class AlienInvasion:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					sys.exit()
-			self.screen.fill(self.bg_color)
+			self.screen.fill(self.settings.bg_color)
 			pygame.display.flip()
 
 
